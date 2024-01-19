@@ -16,15 +16,5 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Setup database
-      uses: docker://postgres:13.3
-      with:
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: wandermate
-        ports:
-          5431:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     - name: Build & Test with Maven
-      run: mvn clean verify
+      run: "docker run --platform linux/amd64 --name wandermate-db -p 5431:5432 -e POSTGRES_DB=wandermate -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:15.1 && mvn clean verify"
