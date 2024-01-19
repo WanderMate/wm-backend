@@ -17,6 +17,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Setup database
-      run: "docker run --platform linux/amd64 --name wandermate-db -p 5431:5432 -e POSTGRES_DB=wandermate -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:15.1"
+      run: "docker run --platform linux/amd64 --name wandermate-db -p 5431:5432 -e POSTGRES_DB=wandermate -e POSTGRES_USER=postgresi -e POSTGRES_PASSWORD=postgres -d postgres:15.1"
     - name: Build & Test with Maven
       run: "mvn clean verify"
