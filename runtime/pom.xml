@@ -8,24 +8,26 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.wandermate</groupId>
-	<artifactId>wm-backend</artifactId>
+	<groupId>io.wandermate.wm-backend</groupId>
+	<artifactId>runtime</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>wm-backend</name>
-	<packaging>pom</packaging>
-	<description>Root project for wandermate backend application</description>
+	<name>runtime</name>
+	<description>Runtime project for wandermate backend</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
-	<modules>
-		<module>runtime</module>
-	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

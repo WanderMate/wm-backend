@@ -1,4 +1,11 @@
 /target/
+*/.mvn/wrapper/maven-wrapper.jar
+*/mvnw
+*/mvnw.cmd
+*/HELP.md
+*/.mvn
+*/target/
+*/.mvn/wrapper/maven-wrapper.properties
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
