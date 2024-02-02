@@ -1,0 +1,5 @@
+- How to exclude parent dependency from child
+- Swagger
+- /api in context path
+- Can we maintain some application.yaml file for root project (parent/global)
+- Add unit tests and coverage contraints
