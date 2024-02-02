@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class UserApplicationTests {
 
+	// TODO: Add tests and coverage contraints
 	@Test
 	void contextLoads() {
 	}
