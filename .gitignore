@@ -5,6 +5,11 @@
 */HELP.md
 */.mvn
 */target/
+.idea/
+*.iml
+*/.idea/
+*/.iml
+*/.iml
 */.mvn/wrapper/maven-wrapper.properties
 !.mvn/wrapper/maven-wrapper.jar
 
