@@ -30,10 +30,9 @@ public class WmUserService {
 
     public WmUserCreateResponse createWmUser(WmUserCreateRequest wmUserCreateRequest) {
         wmUserValidatorService.validateWmUserCreateRequest(wmUserCreateRequest);
-
-        WmUser wmUser = new WmUser();
-        wmUser.setEmail(wmUserCreateRequest.getEmail());
-        wmUser.setName(wmUserCreateRequest.getName());
+        WmUser wmUser = WmUser.builder()
+                        .email(wmUserCreateRequest.getEmail())
+                        .name(wmUserCreateRequest.getName()).build();
         wmUserDAO.save(wmUser);
         return WmUserCreateResponse.builder()
             .message("User created successfully")
